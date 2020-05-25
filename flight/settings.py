@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mq_ax_+sau*o(rw^6(7++13jnd%m#im!5ytk2z&$_a+(v5-b-x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*','192.168.113.12']
+ALLOWED_HOSTS = ['*','192.168.113.12','flightbookify.herokuapp.com']
 
 
 # Application definition
