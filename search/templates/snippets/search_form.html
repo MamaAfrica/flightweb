@@ -1,0 +1,13 @@
+<html>
+<form method="POST" action="{% url 'flightResult'%}" class="form-inline my-2 my-lg-0">{% csrf_token %}
+    <div class="input-group">
+      <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" name="q" aria-label="Search"-->
+             <!--value="{{request.POST.q}}">-->
+        <!--<input class="theme-search-area-section-input typeahead" type="text" placeholder="Departure" data-provide="typeahead">-->
+        {{form.code}}
+        <span class="input-group-btn">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </span>
+    </div>
+</form>
+</html>
