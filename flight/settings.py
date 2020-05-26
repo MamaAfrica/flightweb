@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'flights',
     'search',
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
