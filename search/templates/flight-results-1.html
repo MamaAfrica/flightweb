@@ -34,13 +34,16 @@
                 </div>
               </div>
             </div>
-            <!--<div class="theme-search-area-inline _desk-h theme-search-area-inline-white">-->
-              <!--<h4 class="theme-search-area-inline-title">Lodon Flights</h4>-->
-              <!--<p class="theme-search-area-inline-details">June 27 &rarr; July 02, 1 Passnger</p>-->
-              <!--<a class="theme-search-area-inline-link magnific-inline" href="#searchEditModal">-->
-                <!--<i class="fa fa-pencil"></i>Edit-->
-              <!--</a>-->
-              <!--<div class="magnific-popup magnific-popup-sm mfp-hide" id="searchEditModal">-->
+            <div class="theme-search-area-inline _desk-h theme-search-area-inline-white">
+                {% for flight_search in flightDepartCode_data %}
+              <h4 class="theme-search-area-inline-title">{{flight_search.total_flights}} Flights to {{ flight_search.arrival_airport_name }}</h4>
+              {% endfor %}
+                <p class="theme-search-area-inline-details">June 27 &rarr; July 02, 1 Passnger</p>
+              <a class="theme-search-area-inline-link magnific-inline" href="#searchEditModal">
+                <i class="fa fa-pencil"></i>Edit
+              </a>
+              <div class="magnific-popup magnific-popup-sm mfp-hide" id="searchEditModal">
+                  {% include "snippets/search_form_edit.html" %}
                 <!--<div class="theme-search-area theme-search-area-vert">-->
                   <!--<div class="theme-search-area-header">-->
                     <!--<h1 class="theme-search-area-title theme-search-area-title-sm">Edit your Search</h1>-->
@@ -104,13 +107,14 @@
                         <!--</div>-->
                       <!--</div>-->
                     <!--</div>-->
-                    <!--<button class="theme-search-area-submit _mt-0 _tt-uc theme-search-area-submit-curved">Change</button>-->
+                    <!--<button type="submit" class="theme-search-area-submit _mt-0 _tt-uc theme-search-area-submit-curved">Change</button>-->
                   <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
     <div class="theme-page-section theme-page-section-gray">
